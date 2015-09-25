@@ -1,0 +1,207 @@
+@charset "utf-8";
+
+$active-state: #2C7D1E;
+
+* {
+  box-sizing: border-box;
+}
+body {
+  background: #eee;
+  margin: 2em 0;
+  position: relative;
+}
+
+button {
+  background-color: #fff;
+  border: 1px solid $active-state;
+  padding: 1em;
+  margin: 1em;
+  color: $active-state;
+  &:hover {
+    background-color: darken(#fff, 10%);
+  }
+}
+
+input {
+  width: 100%;
+  padding: 1em;
+}
+
+label {
+  display: block;
+}
+
+nav {
+  position: absolute;
+}
+
+ul, ol {
+  li {
+    margin-bottom: 0.5em;
+  }
+}
+
+.content {
+  width: 1024px;
+  margin: 0 auto;
+}
+
+.prototype-container {
+  width: 500px;
+  height: 890px;
+  margin: 0 auto;
+  background-image: url('../images/bg-map.png');
+  border: 1px solid #999;
+  border-radius: 3px;
+  margin-top: 4em;
+  position: relative;
+}
+
+.menu-bar {
+  padding: 1em;
+  width: 100%;
+  display: inline-block;
+}
+
+.toggle {
+  border: 1px solid $active-state;
+  margin: 0 auto;
+  list-style: none;
+  padding: 0;
+  border-radius: 3px;
+
+  li {
+    display: inline-block;
+    text-align: center;
+    padding: 1em;
+    width: 50%;
+    background-color: #fff;
+    color: $active-state;
+    cursor: pointer;
+    margin: 0;
+    &.active {
+      background-color: $active-state;
+      color: #fff;
+    }
+  }
+}
+
+%pin {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: $active-state;
+  color: #fff;
+  text-align: center;
+  font-size: 1.5em;
+  line-height: 1.75em;
+  position: absolute;
+  border: 1px solid darken($active-state, 20%);
+}
+
+.pin1, .pin2, .pin3, .pin4 {
+  @extend %pin;
+}
+
+.pin1 {
+  top: 400px;
+  left: 100px;
+}
+
+.pin2 {
+  top: 200px;
+  right: 100px;
+}
+
+.pin3 {
+  bottom: 440px;
+  left: 200px;
+}
+
+.pin4 {
+  top: 240px;
+  right: 200px;
+}
+
+ .park-bike-pins {
+  display: none;
+ }
+
+.park-bike .park-bike-pins {
+  display: block;
+}
+
+.footer-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  border-box: box-sizing;
+}
+
+.center-btn {
+  float: right;
+}
+
+//Phase 2
+
+.search-bar {
+  position: absolute;
+  top: 75px;
+  width: 100%;
+  padding: 0 1em;
+  text-align: center;
+}
+
+.search-input {
+  margin: 0 auto;
+}
+
+//Phase 3
+
+.account-info {
+  .toggle  {
+    width: 75%;
+    margin: 0;
+  } 
+}
+
+.account {
+  width: 25%;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.account-overlay {
+  display: none;
+  padding: 1em;
+  background-color: #A2A2A2;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  input {
+    margin-bottom: 1.5em;
+  }
+}
+
+form {
+  padding: 2em 0;
+}
+
+.sign-in-btn {
+  width: 100%;
+  margin: 1em 0 0 0;
+}
+
+.close {
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
+  cursor: pointer;
+}
